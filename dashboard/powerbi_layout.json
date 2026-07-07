@@ -1,0 +1,14 @@
+{
+  "title": "Customer Churn Dashboard",
+  "kpis": [
+    {"metric": "Total Customers", "value": 7043},
+    {"metric": "Churn Rate", "value": 26.5, "suffix": "%"},
+    {"metric": "Avg Monthly Charges", "value": 64.76, "prefix": "$"},
+    {"metric": "Avg Tenure", "value": 32.4, "suffix": " months"}
+  ],
+  "visuals": [
+    {"type": "bar", "title": "Churn Rate by Contract", "x": "Contract", "y": "churn_rate"},
+    {"type": "column", "title": "Avg Tenure by Contract", "x": "Contract", "y": "avg_tenure"},
+    {"type": "scatter", "title": "Monthly Charges vs Total Charges", "x": "MonthlyCharges", "y": "TotalCharges"}
+  ]
+}
