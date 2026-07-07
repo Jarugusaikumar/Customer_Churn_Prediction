@@ -1,6 +1,6 @@
 # Customer Churn Prediction
 
-This project trains a churn prediction model on the Telco customer churn dataset and exposes it through a Streamlit dashboard.
+An end-to-end machine learning project that predicts customer churn using Python, Scikit-learn, Streamlit, SQL Server, and Power BI. It includes data preprocessing, model training, an interactive dashboard, and a deployment-ready web application.
 
 ## Setup
 
@@ -21,3 +21,4 @@ streamlit run app/app.py
 - src/train.py: model training script
 - src/predict.py: inference helper
 - src/utils.py: shared paths and data loading helpers
+
