@@ -83,8 +83,12 @@ if submitted:
         "TotalCharges": TotalCharges,
     }
 
-    result = predict_churn(payload)
-    st.subheader("Prediction Result")
-    st.metric("Churn Prediction", result["prediction"])
-    st.metric("Churn Probability", f"{result['probability'] * 100:.2f}%")
-    st.progress(result["probability"])
+    try:
+        result = predict_churn(payload)
+    except Exception as err:
+        st.error(f"Prediction failed: {err}")
+    else:
+        st.subheader("Prediction Result")
+        st.metric("Churn Prediction", result["prediction"])
+        st.metric("Churn Probability", f"{result['probability'] * 100:.2f}%")
+        st.progress(result["probability"])
